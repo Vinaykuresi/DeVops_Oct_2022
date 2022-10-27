@@ -1,0 +1,7 @@
+
+who :
+    <Login Name><Pseudo-terminal ID><logged in time><remote host name>
+
+uname : 
+    x86_64
+

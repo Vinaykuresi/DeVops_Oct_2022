@@ -1,0 +1,192 @@
+
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~
+$ cd "C:\Users\Vinay Kuresi\Documents\Classes\DeVops"
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ls
+Linux/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ pwd
+/c/Users/Vinay Kuresi/Documents/Classes/DeVops
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ls
+Linux/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ cd Linux/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux
+$ ls
+ intro.txt   introduction.docx  '~$troduction.docx'
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux
+$ cd ..
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ mkdir demo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ rmdir demo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ mkdir demo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ cd demo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ ls
+demo.txt.txt
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ ls
+demo.txt
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ cat demo
+cat: demo: No such file or directory
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ cat demo.txt
+hello world
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ cd ..
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ls
+Linux/  demo/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ rmdir demo
+rmdir: failed to remove 'demo': Directory not empty
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ rm demo
+rm: cannot remove 'demo': Is a directory
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ cd demo/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ ls
+demo.txt
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ rm demo.txt
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ ls
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/demo
+$ cd ..
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ls
+Linux/  demo/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ rmdir demo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ho
+bash: ho: command not found
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ who
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ uname
+MINGW64_NT-10.0-19044
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ ls
+Linux/
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ xs linux
+bash: xs: command not found
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
+$ cd linux
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/linux
+$ ls
+ intro.txt   introduction.docx  '~$troduction.docx'
+\
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/linux
+$ \cat intro.txt
+
+who :
+    <Login Name><Pseudo-terminal ID><logged in time><remote host name>
+
+uname :
+    x86_64
+
+
+uname : 
+    x86_64
+
+This message is shown once a day. To disable it please create the
+/home/vinay/.hushlogin file.
+vinay@DESKTOP-9TD5GPC:~$ cal
+Command 'cal' not found, but can be installed with:
+sudo apt install ncal
+vinay@DESKTOP-9TD5GPC:~$ date
+Sat Oct 22 11:21:06 IST 2022
+vinay@DESKTOP-9TD5GPC:~$ date -d 08/22/2022
+Mon Aug 22 00:00:00 IST 2022
+vinay@DESKTOP-9TD5GPC:~$ date -d 10/22/2022
+Sat Oct 22 00:00:00 IST 2022
+vinay@DESKTOP-9TD5GPC:~$ date +"%a %d %b %Y"
+Sat 22 Oct 2022
+vinay@DESKTOP-9TD5GPC:~$ date +"%Y  %a %d %b"
+2022  Sat 22 Oct
+vinay@DESKTOP-9TD5GPC:~$ who
+vinay@DESKTOP-9TD5GPC:~$ uname
+Linux
+vinay@DESKTOP-9TD5GPC:~$ uname -p
+x86_64
+vinay@DESKTOP-9TD5GPC:~$ uname -o
+GNU/Linux
+vinay@DESKTOP-9TD5GPC:~$ echo "Hello World"
+Hello World
+vinay@DESKTOP-9TD5GPC:~$ echo "Hello\nWorld"
+Hello\nWorld
+vinay@DESKTOP-9TD5GPC:~$ echo -e "Hello\nWorld"
+Hello
+World
+vinay@DESKTOP-9TD5GPC:~$ printf "%d %s" 27 Vinay
+27 Vinayvinay@DESKTOP-9TD5GPC:~$ printf "%s %d" 27 Vinay
+-bash: printf: Vinay: invalid number
+27 0vinay@DESKTOP-9TD5GPC:~$ printf "%d %s" 27 Vinay
+27 Vinayvinay@DESKTOP-9TD5GPC:~$ bc
+bc 1.07.1
+Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type `warranty'.
+12*10
+120
+65+56
+121
+12*10;65+56
+120
+121
+9/3
+3
+10/3
+3
+scale=4
+10/3
+3.3333
+quit()
+vinay@DESKTOP-9TD5GPC:~$ tty
+/dev/tty1
+vinay@DESKTOP-9TD5GPC:~$ which mkdir
+/usr/bin/mkdir
+vinay@DESKTOP-9TD5GPC:~$ which vinaydir
+vinay@DESKTOP-9TD5GPC:~$ type exit
+exit is a shell builtin
+vinay@DESKTOP-9TD5GPC:~$
