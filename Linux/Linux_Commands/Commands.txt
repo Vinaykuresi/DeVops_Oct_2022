@@ -97,6 +97,12 @@ bash: ho: command not found
 Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
 $ who
 
+who :
+    <Login Name><Pseudo-terminal ID><logged in time><remote host name>
+
+uname : 
+    x86_64
+
 Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops
 $ uname
 MINGW64_NT-10.0-19044
