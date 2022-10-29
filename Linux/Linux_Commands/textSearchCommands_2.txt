@@ -1,0 +1,327 @@
+tail Assignment_1.log
+
+1) Calculate the Area of the Right angled Traingle.
+
+2) Calculate the Hypotenuse of the Traingle.
+
+    input
+    process
+    output
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/Data_Structures_and_Algorithms_OCT_2022/Python/Variables/Assignment (main)
+$ tail Assignment_1.txt
+
+1) Calculate the Area of the Right angled Traingle.
+
+2) Calculate the Hypotenuse of the Traingle.
+
+    input
+    process
+    output
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/Data_Structures_and_Algorithms_OCT_2022/Python/Variables/Assignment (main)
+$ cd "C:\Users\Vinay Kuresi\Documents\Classes\DeVops\Linux\Log_Files"
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cut -d "-" -f1 access.log
+10.123.80.65
+10.123.80.65
+10.123.80.65
+10.123.80.65
+10.123.80.65
+10.123.80.65
+10.123.80.65
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ ^C
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cut -d "-" -f1,2 access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ ^C
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cut -d "-" -f2 access.log
+ Admin [11/May/2017:11:10:15 ] "GET /sony
+ Admin [11/May/2017:11:10:15 ] "GET /samsung
+ User1 [11/May/2017:11:10:15 ] "GET /sony
+ User2 [11/May/2017:11:10:15 ] "GET /samsung
+ User1 [11/May/2017:11:10:15 ] "GET /sony
+ User5 [11/May/2017:11:10:15 ] "GET /sony
+ User4 [11/May/2017:11:10:15 ] "GET /sony
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cut -d "-" -f1,2 access.log | cut -d " " -f3
+Admin
+Admin
+User1
+User2
+User1
+User5
+User4
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cut -d "-" -f1,2 access.log | cut -d " " -f3
+Admin
+Admin
+User1
+User2
+User1
+User5
+User4
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ ^C
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$  cut -d "-" -f1,2 access.log | cut -d " " -f1,3
+10.123.80.65 Admin
+10.123.80.65 Admin
+10.123.80.65 User1
+10.123.80.65 User2
+10.123.80.65 User1
+10.123.80.65 User5
+10.123.80.65 User4
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ cat new_brand.dat
+Sony
+Sony
+Sony
+Sony
+Sony
+Sony
+Sony
+RealMe
+RealMe
+RealMe
+RealMe
+RealMe
+Apple
+Apple
+Apple
+Apple
+Apple
+Apple
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm old_brand.dat new_brand.dat
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                RealMe
+                RealMe
+                RealMe
+                RealMe
+                RealMe
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+                Lenevo
+                Lenevo
+                Lenevo
+                Lenevo
+                Lenevo
+                Lenevo
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm old_brand.dat new_brand.dat
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+comm: file 1 is not in sorted order
+comm: file 2 is not in sorted order
+        Apple
+        Apple
+        Apple
+        Apple
+        Apple
+        Apple
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+RealMe
+RealMe
+RealMe
+RealMe
+RealMe
+Apple
+Apple
+Apple
+Apple
+Apple
+Apple
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+comm: input is not in sorted order
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm --check-order old_brand.dat new_brand.dat
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+comm: file 1 is not in sorted order
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm old_brand.dat new_brand.dat
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+RealMe
+RealMe
+RealMe
+RealMe
+RealMe
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+comm: file 1 is not in sorted order
+comm: file 2 is not in sorted order
+
+
+comm: input is not in sorted order
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm -12 old_brand.dat new_brand.dat
+Apple
+Apple
+Apple
+Apple
+Apple
+Apple
+Sony
+Sony
+Sony
+Sony
+Sony
+Sony
+Sony
+comm: file 1 is not in sorted order
+comm: file 2 is not in sorted order
+
+comm: input is not in sorted order
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm -13 old_brand.dat new_brand.dat
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+Lenevo
+Samsung
+Samsung
+Samsung
+Samsung
+Samsung
+comm: file 1 is not in sorted order
+comm: file 2 is not in sorted order
+comm: input is not in sorted order
+
+Vinay Kuresi@DESKTOP-9TD5GPC MINGW64 ~/Documents/Classes/DeVops/Linux/Log_Files (main)
+$ comm --nocheck-order old_brand.dat new_brand.dat
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+                Apple
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+ASUS
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+        Lenevo
+RealMe
+RealMe
+RealMe
+RealMe
+RealMe
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+        Samsung
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+                Sony
+
+
