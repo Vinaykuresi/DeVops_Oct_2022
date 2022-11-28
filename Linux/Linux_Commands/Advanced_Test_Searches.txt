@@ -17,4 +17,166 @@ I/O Redirection :
     Output Redirection :   > Operator
     Input Redirection :    < Operator
 
-    
+
+Code : 
+
+vinay@DESKTOP-9TD5GPC:~$ cd "/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops$ dir
+Database  Linux  README.md
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops$ cd Linux/
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ dir
+Change\ Directory\ in\ Ubuntu.txt  Linux_Commands  Log_Files  introduction.docx  ~$troduction.docx
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ dir
+Change\ Directory\ in\ Ubuntu.txt  Linux_Commands  Log_Files  introduction.docx  ~$troduction.docx
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ cd Log_Files/
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ dir
+access.log  mail_api.log  new_brand.dat  old_brand.dat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cat access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"vinay@DESKTOP-9TD5GPC:/mnt/c
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -i 'inverter' access.log
+| tail -3
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -i 'mobile' access.log |
+wc -l
+4
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cat access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 99 '11/May/2016' access.log
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 2 '11/May/2016' access
+.log
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+--
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 1 '11/May/2016' access
+.log
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+--
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -B 1 '11/May/2016' access
+.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+--
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 1 '11/May/2016' access
+grep: access: No such file or directory
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 1 '11/May/2016' access.log | grep -B 1 '11/May/2016' access
+grep: access: No such file or directory
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 1 '11/May/2016' access.log | grep -B 1 '11/May/2016'
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+--
+--
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -A 1 '11/May/2016' access.log | grep -B 1 '11/May/2016' | grep -i 'Mobile'
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cat access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cat access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Laptop-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Laptop-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Inverter-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -iE "mobile|laptop"
+^C
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -iE "mobile|laptop" access.log
+10.123.80.65 - Admin [11/May/2017:11:10:15 ] "GET /samsung-Laptop-sam98009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Laptop-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -i 'user' access.log
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+10.123.80.65 - User2 [11/May/2017:11:10:15 ] "GET /samsung-Mobile-sam88009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2016:11:10:15 ] "GET /sony-Mobile-Mob8509/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2017:11:10:15 ] "GET /sony-Laptop-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User5 [11/May/2017:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User4 [11/May/2016:11:10:15 ] "GET /sony-Inverter-IN8009/index.html HTTP/1.0"
+10.123.80.65 - User1 [11/May/2017:11:10:15 ] "GET /sony-Mobile-Mob8009/index.html HTTP/1.0"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -i 'user' access.log | cut -d ' ' -f1,3
+10.123.80.65 User1
+10.123.80.65 User2
+10.123.80.65 User1
+10.123.80.65 User5
+10.123.80.65 User4
+10.123.80.65 User5
+10.123.80.65 User4
+10.123.80.65 User1
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ grep -i 'user' access.log | cut -d ' ' -f1,3 > successful_user_request.bat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$
