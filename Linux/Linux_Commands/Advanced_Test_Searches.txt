@@ -1,0 +1,20 @@
+
+Pattren Matching :
+
+Meta Character          Usage
+    .                   Matches any single Character
+    +                   Matches Immediate Preceding Character 1 or more times
+    *                   It matches the Preceding Character zero or more times 
+    ?                   The Preceding Character is Optional when used with ?
+    []                  Character class is a list of possible Characters specified in Square brackets([])
+                        that may match
+
+Grep Command : 
+
+
+I/O Redirection : 
+
+    Output Redirection :   > Operator
+    Input Redirection :    < Operator
+
+    
