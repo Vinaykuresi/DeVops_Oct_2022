@@ -1,0 +1,34 @@
+Ensure sufficient Storage space availability : 
+
+    1) Reserve storage 
+    2) Growing Space 
+
+    Storage : 
+
+    1) Check the availability of storage space 
+    2) Perform data compression
+
+    df Command : 
+        "-h" -> 
+
+    du Command : 
+
+    gzip Command : 
+        data comprehension techniques.
+
+        gzip access.log -> zip -> access.log.gz
+        gzip -d access.log.gz -> unzip -> access.log 
+
+    Perform Process CleanUp : 
+
+        1) Spawn
+        2) Switch -> Foreground -> BackGround 
+        3) Change Process Priority
+        4) Terminate a long running Process 
+
+        Commands used to Preocess CLeanUp Tasks :
+
+            1) ps, top, renice -> change process priority to execute it sooner
+            2) kill -> Terminate a long running process
+
+    
