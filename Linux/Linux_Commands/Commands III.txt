@@ -425,3 +425,180 @@ vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/L
       2 10.123.80.65 User4
       1 10.123.80.65 User2
 vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------
+
+
+vinay@DESKTOP-9TD5GPC:~$ cd "/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops$ ls
+Database  Linux  README.md
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops$ cd Linux/Log_Files/
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ls
+access.log  mail_api.log  new_brand.dat  old_brand.dat  successful-user-request.txt
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ jobs -1
+-bash: jobs: -1: invalid option
+jobs: usage: jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ jobs -l
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ jobs -I
+-bash: jobs: -I: invalid option
+jobs: usage: jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ jobs -l
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ sleep 10 &
+[1] 80
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ jobs -l
+[1]+    80 Running                 sleep 10 &
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ps
+  PID TTY          TIME CMD
+    9 tty1     00:00:00 bash
+   81 tty1     00:00:00 ps
+[1]+  Done                    sleep 10
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ps -u root | grep "mysql"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ps -u root | grep "mysql"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ps | grep "mysql"
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ top
+top - 07:20:17 up 10 min,  0 users,  load average: 0.52, 0.58, 0.59
+Tasks:   4 total,   1 running,   3 sleeping,   0 stopped,   0 zombie
+%Cpu(s): 10.5 us,  6.4 sy,  0.0 ni, 81.9 id,  0.0 wa,  1.3 hi,  0.0 si,  0.0 st
+MiB Mem :   3850.3 total,    432.7 free,   3193.6 used,    224.0 buff/cache
+MiB Swap:  11776.0 total,  10528.6 free,   1247.4 used.    526.1 avail Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+    1 root      20   0    8948    404    332 S   0.0   0.0   0:00.09 init
+    8 root      20   0    9300    236    180 S   0.0   0.0   0:00.00 init
+    9 vinay     20   0   17404   4216   4100 S   0.0   0.1   0:00.25 bash
+   88 vinay     20   0   18816   2248   1588 R   0.0   0.1   0:00.04 top
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ ls
+\access.log  mail_api.log  new_brand.dat  old_brand.dat  successful-user-request.txt
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cp old_brand.dat ./back_up/old_brand.dat
+cp: cannot create regular file './back_up/old_brand.dat': No such file or directory
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cp old_brand.dat ./back_up/old_brand.dat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ mv old_brand.dat ./back_up/old
+_brand.dat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cd back_up/
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ ls
+old_brand.dat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -cvf old_brand.dat
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar old_brand.dat
+tar: Old option 'b' requires an argument.
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar --usage
+Usage: tar [-AcdrtuxGnSkUWOmpsMBiajJzZhPlRvwo?] [-g FILE] [-C DIR] [-T FILE]
+            [-X FILE] [-f ARCHIVE] [-F NAME] [-L NUMBER] [-b BLOCKS]
+            [-H FORMAT] [-V TEXT] [-I PROG] [-K MEMBER-NAME] [-N DATE-OR-FILE]
+            [--catenate] [--concatenate] [--create] [--delete] [--diff]
+            [--compare] [--append] [--test-label] [--list] [--update]
+            [--extract] [--get] [--check-device] [--listed-incremental=FILE]
+            [--incremental] [--hole-detection=TYPE] [--ignore-failed-read]
+            [--level=NUMBER] [--no-check-device] [--no-seek] [--seek]
+            [--occurrence[=NUMBER]] [--sparse-version=MAJOR[.MINOR]] [--sparse]
+            [--add-file=FILE] [--directory=DIR] [--exclude=PATTERN]
+            [--exclude-backups] [--exclude-caches] [--exclude-caches-all]
+            [--exclude-caches-under] [--exclude-ignore=FILE]
+            [--exclude-ignore-recursive=FILE] [--exclude-tag=FILE]
+            [--exclude-tag-all=FILE] [--exclude-tag-under=FILE] [--exclude-vcs]
+            [--exclude-vcs-ignores] [--no-null] [--no-recursion] [--no-unquote]
+            [--no-verbatim-files-from] [--null] [--recursion]
+            [--files-from=FILE] [--unquote] [--verbatim-files-from]
+            [--exclude-from=FILE] [--anchored] [--ignore-case] [--no-anchored]
+            [--no-ignore-case] [--no-wildcards] [--no-wildcards-match-slash]
+            [--wildcards] [--wildcards-match-slash] [--keep-directory-symlink]
+            [--keep-newer-files] [--keep-old-files] [--no-overwrite-dir]
+            [--one-top-level[=DIR]] [--overwrite] [--overwrite-dir]
+            [--recursive-unlink] [--remove-files] [--skip-old-files]
+            [--unlink-first] [--verify] [--ignore-command-error]
+            [--no-ignore-command-error] [--to-stdout] [--to-command=COMMAND]
+            [--atime-preserve[=METHOD]] [--clamp-mtime]
+            [--delay-directory-restore] [--group=NAME] [--group-map=FILE]
+            [--mode=CHANGES] [--mtime=DATE-OR-FILE] [--touch]
+            [--no-delay-directory-restore] [--no-same-owner]
+            [--no-same-permissions] [--numeric-owner] [--owner=NAME]
+            [--owner-map=FILE] [--preserve-permissions] [--same-permissions]
+            [--same-owner] [--sort=ORDER] [--preserve-order] [--same-order]
+            [--acls] [--no-acls] [--no-selinux] [--no-xattrs] [--selinux]
+            [--xattrs] [--xattrs-exclude=MASK] [--xattrs-include=MASK]
+            [--force-local] [--file=ARCHIVE] [--info-script=NAME]
+            [--new-volume-script=NAME] [--tape-length=NUMBER] [--multi-volume]
+            [--rmt-command=COMMAND] [--rsh-command=COMMAND] [--volno-file=FILE]
+            [--blocking-factor=BLOCKS] [--read-full-records] [--ignore-zeros]
+            [--record-size=NUMBER] [--format=FORMAT] [--  gnu] [--  oldgnu] [--
+             pax] [--  posix] [--  ustar] [--  v7] [--old-archive]
+            [--portability]
+            [--pax-option=keyword[[:]=value][,keyword[[:]=value]]...] [--posix]
+            [--label=TEXT] [--auto-compress] [--use-compress-program=PROG]
+            [--bzip2] [--xz] [--lzip] [--lzma] [--lzop] [--no-auto-compress]
+            [--zstd] [--gzip] [--gunzip] [--ungzip] [--compress] [--uncompress]
+            [--backup[=CONTROL]] [--hard-dereference] [--dereference]
+            [--starting-file=MEMBER-NAME] [--newer-mtime=DATE]
+            [--newer=DATE-OR-FILE] [--after-date=DATE-OR-FILE]
+            [--one-file-system] [--absolute-names] [--suffix=STRING]
+            [--strip-components=NUMBER] [--transform=EXPRESSION]
+            [--xform=EXPRESSION] [--checkpoint[=NUMBER]]
+            [--checkpoint-action=ACTION] [--full-time] [--index-file=FILE]
+            [--check-links] [--no-quote-chars=STRING] [--quote-chars=STRING]
+            [--quoting-style=STYLE] [--block-number] [--show-defaults]
+            [--show-omitted-dirs] [--show-snapshot-field-ranges]
+            [--show-transformed-names] [--show-stored-names]
+            [--totals[=SIGNAL]] [--utc] [--verbose] [--warning=KEYWORD]
+            [--interactive] [--confirmation] [--help] [--restrict] [--usage]
+            [--version] [FILE]...
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -g old_brand.dat
+tar: You must specify one of the '-Acdtrux', '--delete' or '--test-label' options
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -c old_brand.dat
+tar: Refusing to write archive contents to terminal (missing -f option?)
+tar: Error is not recoverable: exiting now
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -c old_brand.dat
+tar: Refusing to write archive contents to terminal (missing -f option?)
+tar: Error is not recoverable: exiting now
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -t
+tar: Refusing to read archive contents from terminal (missing -f option?)
+tar: Error is not recoverable: exiting now
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -z old_brand.dat
+tar: You must specify one of the '-Acdtrux', '--delete' or '--test-label' options
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -r old_brand.dat
+tar: Options '-Aru' are incompatible with '-f -'
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -c old_brand.dat old.tar
+tar: Refusing to write archive contents to terminal (missing -f option?)
+tar: Error is not recoverable: exiting now
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ tar -czvf sample.tar.gz
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ cd ..
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ tar -czvf sample.tar.gz ./back_up/
+./back_up/
+./back_up/old_brand.dat
+/bin/sh: 1: gzip: Exec format error
+tar: Child returned status 126
+tar: Error is not recoverable: exiting now
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cd back_up/
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$ ls
+old_brand.dat
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files/back_up$
