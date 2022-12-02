@@ -31,4 +31,107 @@ Ensure sufficient Storage space availability :
             1) ps, top, renice -> change process priority to execute it sooner
             2) kill -> Terminate a long running process
 
+-------------------------------------------------------------------------------------------------
+
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+rootfs          238G  179G   59G  76% /
+none            238G  179G   59G  76% /dev
+none            238G  179G   59G  76% /run
+none            238G  179G   59G  76% /run/lock
+none            238G  179G   59G  76% /run/shm
+none            238G  179G   59G  76% /run/user
+tmpfs           238G  179G   59G  76% /sys/fs/cgroup
+C:\             238G  179G   59G  76% /mnt/c
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ df /run/user
+Filesystem     1K-blocks      Used Available Use% Mounted on
+none           248751100 187432948  61318152  76% /run/user
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ df -T
+Filesystem     Type  1K-blocks      Used Available Use% Mounted on
+rootfs         wslfs 248751100 187433076  61318024  76% /
+none           tmpfs 248751100 187433076  61318024  76% /dev
+none           tmpfs 248751100 187433076  61318024  76% /run
+none           tmpfs 248751100 187433076  61318024  76% /run/lock
+none           tmpfs 248751100 187433076  61318024  76% /run/shm
+none           tmpfs 248751100 187433076  61318024  76% /run/user
+tmpfs          tmpfs 248751100 187433076  61318024  76% /sys/fs/cgroup
+C:\            drvfs 248751100 187433076  61318024  76% /mnt/c
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h
+8.0K    .
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h /run/user | tail -5
+0       /run/user
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du
+8       .
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h "C:\Program Files"
+du: cannot access 'C:\Program Files': No such file or directory
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h /mnt/c/Users/
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/InputPersonalization/TrainedDataStore
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/InputPersonalization
+48K     /mnt/c/Users/Default/AppData/Local/Microsoft/Internet Explorer
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/Windows/CloudStore
+
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h /mnt/c/Users/ | tail -5
+du: cannot read directory '/mnt/c/Users/Vinay Kuresi/AppData/Local/ElevatedDiagnostics': Permission denied
+^C
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -h /mnt/c/Users/ | head -5
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/InputPersonalization/TrainedDataStore
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/InputPersonalization
+48K     /mnt/c/Users/Default/AppData/Local/Microsoft/Internet Explorer
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/Windows/CloudStore
+0       /mnt/c/Users/Default/AppData/Local/Microsoft/Windows/GameExplorer
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -a -h
+4.0K    ./access.log
+4.0K    ./mail_api.log
+0       ./new_brand.dat
+0       ./old_brand.dat
+0       ./successful-user-request.txt
+8.0K    .
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ du -ha  --time
+4.0K    2022-11-28 08:39        ./access.log
+4.0K    2022-10-22 11:57        ./mail_api.log
+0       2022-10-29 11:25        ./new_brand.dat
+0       2022-11-19 11:18        ./old_brand.dat
+0       2022-11-28 08:53        ./successful-user-request.txt
+8.0K    2022-11-28 08:53        .
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ gzip access.log
+-bash: /usr/bin/gzip: cannot execute binary file: Exec format error
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ gzip new_brand.dat
+-bash: /usr/bin/gzip: cannot execute binary file: Exec format error
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux/Log_Files$ cd ..
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ gzip Log_Files
+-bash: /usr/bin/gzip: cannot execute binary file: Exec format error
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ gzip Log_Files/
+-bash: /usr/bin/gzip: cannot execute binary file: Exec format error
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ --version
+--version: command not found
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ -version
+-version: command not found
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.1 LTS
+Release:        22.04
+Codename:       jammy
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ apt install gzip=1.10-4ubuntu4
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ gzip
+-bash: /usr/bin/gzip: cannot execute binary file: Exec format error
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ tty
+/dev/tty1
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ which gzip
+/usr/bin/gzip
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ sleep 20 &
+[1] 178
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux$ jobs -1
+-bash: jobs: -1: invalid option
+jobs: usage: jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+[1]+  Done                    sleep 20
+vinay@DESKTOP-9TD5GPC:/mnt/c/Users/Vinay Kuresi/Documents/Classes/DeVops/Linux
+
+
+
+
+
+
     
