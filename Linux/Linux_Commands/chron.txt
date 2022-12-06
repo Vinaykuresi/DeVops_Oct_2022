@@ -1,0 +1,12 @@
+
+***** command / script to be executed
+
+* -> minutes(0 to 59)
+* -> hours(0 to 23)
+day, month, day of week(0, 6)
+
+15 8 3 * * <command / script>
+
+crond : to run cron in Linux
+
+
